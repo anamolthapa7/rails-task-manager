@@ -1,0 +1,16 @@
+<h1 class="mb-4">Add Tasks</h1>
+<%= form_with(model: @task, local: true, html: { class: "container mt-5" }) do |form| %>
+  <div class="mb-3">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control", placeholder: "Type..." %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :details, class: "form-label" %>
+    <%= form.text_area :details, class: "form-control", placeholder: "Type...", row: 4  %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "update Task", class: "btn btn-primary" %>
+  </div>
+<% end %>
